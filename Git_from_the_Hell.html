@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112443123-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112443123-1');
+        </script>
+
+
+        <title>프로젝트 관리</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Life coding">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="xerros">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1><a href="index.html" title="생활코딩">생활코딩</a></h1>
+        <h1><a href="project_management.html" title="프로젝트 관리">프로젝트 관리</a></h1>
+        <ol>
+            <li><a href="Git_from_the_hell.html" title="지옥에서 온 Git">지옥에서 온 Git</a></li>
+            <li><a href="GIT.html" title="GIT(Gui)">GIT(Gui)</a></li>
+            <li><a href="Subversion.html" title="Subversion">Subversion</a></li>
+        </ol>
+        <h2>지옥에서 온 Git</h2>
+
+        <ol>
+            <li><h3>커버 페이지</h3></li>
+            <p>
+                이 수업은 Git의 초심자에게는 기본적인 사용법을 중급자는 Git이 동작하는 원리를 소개해드리기 위한 수업입니다. <br>
+                이 수업에서는 명령어를 통해서 Git을 다루는 방법을 소개합니다. 명령어 기반 Git은 많은 시스템에 기본적으로 <br>
+                설치 되어 있기 때문에 명령어로 Git을 다룰 수 있게 되면 많은 곳에서 특별한 설치 없이 Git을 사용할 수 있습니다.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hFJZwOfme6w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <li><h3>버전관리의 본질</h3></li>
+            <p>
+                저는 기술에는 본질과 혁신이 있다고 생각합니다. 그 기술의 모든 제품이 공통적으로 가지고 있는 특성이 본질이고, <br>
+                특정 제품이 가지고 온 변화가 혁신이라고 생각합니다. 본 토픽의 하위에서는 버전관리 시스템을 관통하는 본질적인 기능을 살펴봅니다. <br>
+                본질은 최초의 혁신이면서 보편적인 기능이고 쉽습니다. 편한 마음으로 git을 즐기시길 바랄께요.
+            </p>
+
+            <li><h3>설치 및 실습방법</h3></li>
+            <p>
+                <a href="https://git-scm.com" target="_blank" title="git 공식 홈페이지">git 공식 홈페이지</a>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JKT9laOAPIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <p>
+                아래 리눅스 수업을 참고해주세요. <br>
+                <a href="https://opentutorials.org/module/2538" target="_blank" title="리눅스 수업">커멘드 라인 시스템의 사용방법</a>
+            </p>
+            <p>
+                codeonweb을 이용하시면 간편하게 실습환경을 마련할 수 있습니다. <br>
+                <a href="https://codeonweb.com" target="_blank" title="codeonweb">간편하게 실습환경을 마련하는 방법</a>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oDCU8kyiTSA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <li><h3>저장소 만들기</h3></li>
+            <p>
+                여기서는 프로젝트 환경을 만드는 법을 알아봅니다.
+                <ol>
+                    <li>프로젝트 파일을 만듭시다. <br> mkdir gitfth</li>
+                    <li>프로젝트 디렉토리로 들어갑니다. <br> cd gitfth</li>
+                    <li>현재 디렉토리를 git의 (버전) 저장소로 만듭니다. <br> git init</li>
+                </ol>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fCY1t3QSEhw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <li><h3>git이 관리할 대상으로 파일 등록</h3></li>
+            <p>
+                git은 기본적으로 새로운 파일을 관리하지 않습니다. <br>
+                파일을 관리하기 위해서는 관리 대상으로 등록을 해야합니다.
+                <ol>
+                    <li>파일을 생성합니다. <br> vim f1.txt</li>
+                    <li>git이 파일을 추적하도록 명령합니다. <br> git add f1.txt</li>
+                    <li>프로젝트 폴더의 상태를 확인합니다. <br> git status</li>
+                </ol>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lQ0AyoCZzns" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <li><h3>버전 만들기(commit)</h3></li>
+            <p>
+                버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. <br>
+                이 설정은 ~/.gitconfig 파일에 저장되고 1번만 해주면 됩니다.
+                <ol>
+                    <li>git config --global user.name "자신의 닉네임"</li>
+                    <li>git config --global user.email "자신의 이메일"</li>
+                </ol>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ybx9JEuu7Hg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <li><h3>Stage area</h3></li>
+            <p>
+                git은 commit 전에 add를 꼭해야 합니다. 그 이유는 선택적으로 파일을 버전에 포함시키기 위해서 입니다.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qMvO4iPxC4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+        </ol>
+
+
+        <p>
+            <div id="disqus_thread"></div>
+            <script>
+                
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+             /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+            s.src = 'https://xerros-test1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+               (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                          
+        </p>
+
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5a5a24044b401e45400c105d/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+            <!--End of Tawk.to Script-->
+
+    </body>
+
+</html>
